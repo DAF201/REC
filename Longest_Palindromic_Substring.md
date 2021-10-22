@@ -15,3 +15,23 @@ class Solution:
                     mx=x
         return mx
 ```
+
+```python
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        mx=s[0]
+        for x in range(0,len(s)):
+            if len(s)==1:
+                return s[0]
+            for y in range(x+1,len(s)):
+                # print(s[x:y])
+                if s[x]==s[y]:
+                    a=s[x:y+1]
+                    b=a[::-1]
+                    if a==b:
+                        # print(True)
+                        # print(s[x:y])
+                        if len(mx)<y-x+1:
+                            mx=s[x:y+1]
+        return mx
+```
