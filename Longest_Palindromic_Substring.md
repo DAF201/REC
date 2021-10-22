@@ -38,7 +38,7 @@ class Solution:
 ```
 
 others' solution:
-
+left and right expansion
 ```python
 class Solution:
     def longestPalindrome(self, s: str) -> str:
