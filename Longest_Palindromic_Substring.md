@@ -17,6 +17,7 @@ class Solution:
 ```
 
 ```python
+#@right side looping
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         mx=s[0]
