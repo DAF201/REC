@@ -22,35 +22,30 @@ Output: [8,9,9,9,0,0,0,1]
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1:ListNode, l2: ListNode) -> ListNode:
-        
-        
         temp1=''
         l = []
         n = l1
         while n is not None:
             l.append(n.val)
             n = n.next
+        
         l1=l
-        l1.reverse()
-        
-        
         l=[]
         n = l2
         while n is not None:
             l.append(n.val)
             n = n.next
         l2=l
-        
-        l1.reverse()
+
         for x in l1:
             temp1=temp1+str(x)
-            
-            
-        l2.reverse()
+
         temp2=''
         for x in l2:
             temp2=temp2+str(x)
-        result=list(str(int(temp1)+int(temp2)))
+            
+            
+        result=str(int(temp1[::-1])+int(temp2[::-1]))[::-1]
         
         dummy = curr =  ListNode(0)
 
