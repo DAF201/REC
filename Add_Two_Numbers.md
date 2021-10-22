@@ -56,3 +56,40 @@ class Solution:
         curr.next  = None
         return dummy.next
 ```
+
+
+improved ver:
+
+```python
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1:ListNode, l2: ListNode) -> ListNode:
+        temp=''
+        while l1:
+            temp=temp+str(l1.val)
+            l1=l1.next
+        l1=temp
+        l1=l1[::-1]
+        temp=''
+        
+        while l2:
+            temp=temp+str(l2.val)
+            l2=l2.next
+        l2=temp
+        l2=l2[::-1]
+        temp=''
+        
+        result=str(int(l1)+int(l2))[::-1]
+        
+        dummy = curr =  ListNode(0)
+
+        for i in result:
+            curr.next = ListNode(val = int(i))
+            curr = curr.next
+
+        curr.next  = None
+        return dummy.next
+ ```
